@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_text/photo/index.dart';
-import 'home/index.dart';
-import './goods/index.dart';
+import 'package:flutter_text/pages/home/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,11 +15,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      routes: {
-        "/": (context) => const MyHomePage(),
-        "/goods": (context) => const Goods(),
-        "/photo": (context) => const Photo()
-      },
+      home: const MyHomePage(),
+      // routes: {
+      //   "/": (context) => const MyHomePage(),
+      //   "/goods": (context) => const Goods(),
+      //   "/photo": (context) => const Photo()
+      // },
     );
   }
 }

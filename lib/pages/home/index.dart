@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../text/index.dart';
+import '../user/index.dart';
+import '../goods/index.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -10,19 +11,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final List _tabs = [
     {
-      'url': const MyText(),
+      'url': const Goods(),
       'label': '首页',
-      'bottomLabel': '首页顶部',
       'icon': const Icon(Icons.home),
+    },
+    {
+      'url': const User(),
+      'label': '我的',
+      'icon': const Icon(Icons.supervised_user_circle),
     },
   ];
   int _current = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('首页'),
-      ),
+      appBar: AppBar(title: Text(_tabs[_current]['label'])),
       body: _tabs[_current]['url'],
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
