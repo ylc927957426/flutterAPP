@@ -61,6 +61,31 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.amber,
+        shape: const CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                icon: const Icon(Icons.home)),
+            IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/goods');
+                },
+                icon: const Icon(Icons.local_grocery_store_outlined))
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/photo');
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

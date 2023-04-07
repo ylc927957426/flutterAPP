@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_text/photo/index.dart';
 import 'home/index.dart';
 import './goods/index.dart';
 
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => const MyHomePage(),
-        "/goods": (context) => const Goods()
+        "/goods": (context) => const Goods(),
+        "/photo": (context) => const Photo()
       },
     );
   }

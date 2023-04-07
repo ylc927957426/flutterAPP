@@ -34,9 +34,9 @@ class Goods extends StatelessWidget {
                   )),
               OutlinedButton(
                   onPressed: () {
-                    print('这是带边框的按钮');
+                    Navigator.pushNamed(context, '/photo');
                   },
-                  child: const Text('这是带边框的按钮')),
+                  child: const Text('跳转到照片')),
               IconButton(
                   onPressed: () {
                     print('这是图标按钮');
