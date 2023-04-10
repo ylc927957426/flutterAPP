@@ -16,7 +16,7 @@ class Photo extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Image(
                 image: AssetImage('images/a_dot_burr.jpg'),
                 height: 100,
@@ -32,7 +32,13 @@ class Photo extends StatelessWidget {
               Icon(
                 Icons.fingerprint,
                 color: Colors.green,
-              )
+              ),
+              ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/form');
+                  },
+                  icon: Icon(Icons.g_mobiledata_outlined),
+                  label: Text('去表单'))
             ],
           ),
         ],

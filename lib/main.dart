@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_text/pages/form/index.dart';
 import 'package:flutter_text/pages/home/index.dart';
 import 'package:flutter_text/pages/login/index.dart';
 import 'package:flutter_text/pages/not-find-route/index.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => const MyHomePage(),
         "/login": (context) => const Login(),
         "/photo": (context) => const Photo(),
+        "/form": (context) => const MyForm(),
       },
       onUnknownRoute: (setting) {
         return MaterialPageRoute(builder: (_) => const NotFindRoute());
