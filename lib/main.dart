@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_text/pages/home/index.dart';
+import 'package:flutter_text/pages/login/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: const MyHomePage(),
-      // routes: {
-      //   "/": (context) => const MyHomePage(),
-      //   "/goods": (context) => const Goods(),
-      //   "/photo": (context) => const Photo()
-      // },
+      routes: {
+        "/": (context) => const MyHomePage(),
+        "/login": (context) => const Login(),
+      },
     );
   }
 }

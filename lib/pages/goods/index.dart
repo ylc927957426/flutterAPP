@@ -14,7 +14,7 @@ class Goods extends StatelessWidget {
         children: [
           ElevatedButton(
               onPressed: () {
-                Navigator.pop(context, {'id': '商品id'});
+                // Navigator.pop(context, {'id': '商品id'});
               },
               child: const Text('返回首页')),
           TextButton(
@@ -27,7 +27,7 @@ class Goods extends StatelessWidget {
               )),
           OutlinedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/photo');
+                // Navigator.pushNamed(context, '/photo');
               },
               child: const Text('跳转到照片')),
           IconButton(
