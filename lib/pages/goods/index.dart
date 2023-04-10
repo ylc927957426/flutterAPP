@@ -5,9 +5,6 @@ class Goods extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var args = ModalRoute.of(context)?.settings.arguments;
-    print('首页路由携带的参数 $args');
-
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -16,7 +13,7 @@ class Goods extends StatelessWidget {
               onPressed: () {
                 // Navigator.pop(context, {'id': '商品id'});
               },
-              child: const Text('返回首页')),
+              child: const Text('商品页面')),
           TextButton(
               onPressed: () {
                 print('这是文本按钮');
@@ -27,7 +24,8 @@ class Goods extends StatelessWidget {
               )),
           OutlinedButton(
               onPressed: () {
-                // Navigator.pushNamed(context, '/photo');
+                Navigator.pushNamed(context, '/phone',
+                    arguments: {'id': '123456789'});
               },
               child: const Text('跳转到照片')),
           IconButton(
